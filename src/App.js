@@ -2,6 +2,7 @@ import React from 'react';
 import  { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Sidebar from './components/layout/Sidebar'
 import Dashboard from './components/wines/Dashboard'
+import WineDetails from './components/wines/WineDetails'
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       <Sidebar/>
       <Switch>
-        <Route path='/' component={Dashboard} />
+        <Route exact path='/' component={Dashboard} />
+        <Route path='/wines/:id' component={WineDetails} />
       </Switch>
     </div>
     </BrowserRouter>

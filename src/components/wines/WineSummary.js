@@ -1,6 +1,7 @@
 import React from 'react'
 
 const WineSummary = () => {
+
   return(
     <div className="card x-depth-0 project-summary">
       <div className="card-content grey-text text-darken-3">
