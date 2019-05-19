@@ -1,6 +1,7 @@
 import React from 'react';
-import  { BrowserRouter } from 'react-router-dom'
+import  { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Sidebar from './components/layout/Sidebar'
+import Dashboard from './components/wines/Dashboard'
 
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <Sidebar/>
+      <Switch>
+        <Route path='/' component={Dashboard} />
+      </Switch>
     </div>
     </BrowserRouter>
   );
