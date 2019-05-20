@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+// import background from '../../assets/signinbkgrnd.png';
+
 class SignIn extends Component {
   state = {
     email: " ",
@@ -19,8 +21,12 @@ class SignIn extends Component {
   render() {
     return (
       <div className="container">
+      <style jsx>{`
 
-        <form onSubmit={this.handleSubmit} className="white">
+
+
+        `}</style>
+        <form className="formSignIn" onSubmit={this.handleSubmit} className="white">
           <h5 className="grey-text text-darken-3">Sign In</h5>
           <div className="input-field">
             <label htmlFor="email">Email</label>
@@ -40,3 +46,6 @@ class SignIn extends Component {
 }
 
 export default SignIn
+
+
+// <img className="background2" src={background} alt="background picture of barrel, green grapes and wine bottles"></img>
