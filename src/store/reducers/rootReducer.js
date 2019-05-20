@@ -1,6 +1,6 @@
 import authReducer from './authReducer'
 import wineReducer from './wineReducer'
-import  { combineReducers } from 'redux'
+import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
   auth: authReducer,

@@ -13,7 +13,7 @@ class CreateNewWines extends Component {
     locationcloumn: " ",
     locationrow: " ",
     notes: " ",
-    pairingsnotes: " "
+    pairingnotes: " "
   }
 
   handleChange = (e) => {
