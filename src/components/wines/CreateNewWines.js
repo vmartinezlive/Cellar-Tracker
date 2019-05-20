@@ -86,13 +86,13 @@ class CreateNewWine extends Component {
 
           <div className="input-field">
           <h5>Add cellar information:</h5>
-          <label htmlFor="notes">Enter notes</label>
-          <input type="text" id="notes" onChange={this.handleChange}/>
+            <label htmlFor="notes">Enter notes</label>
+            <textarea id="notes" className="materialize-textarea" onChange={this.handleChange}/>
           </div>
 
           <div className="input-field">
             <label htmlFor="pairing-notes">Pairing Notes</label>
-            <input type="text" id="pairing-notes" onChange={this.handleChange}/>
+            <textarea id="pairing-notes" className="materialize-textarea" onChange={this.handleChange}/>
           </div>
 
 
