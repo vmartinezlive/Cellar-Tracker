@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class CreateNewWine extends Component {
+class CreateNewWines extends Component {
   state = {
     winename: " ",
     vintage: " ",
@@ -10,12 +10,10 @@ class CreateNewWine extends Component {
     varietal: " ",
     category: " ",
     alcohol: " ",
-    location-cloumn: " ",
-    location-row: " ",
+    locationcloumn: " ",
+    locationrow: " ",
     notes: " ",
-    pairings-notes: " "
-
-
+    pairingsnotes: " "
   }
 
   handleChange = (e) => {
@@ -32,7 +30,7 @@ class CreateNewWine extends Component {
       <div className="container">
 
         <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="grey-text text-darken-3">Sign In</h5>
+          <h5 className="grey-text text-darken-3">Add New Wine</h5>
           <div className="input-field">
             <label htmlFor="winename">Name of the Wine</label>
             <input type="text" id="winename" onChange={this.handleChange}/>
@@ -73,31 +71,31 @@ class CreateNewWine extends Component {
             <input type="text" id="alcohol" onChange={this.handleChange}/>
           </div>
 
+          <h5>Add Cellar Information:</h5>
+          <br/>
           <div className="input-field">
-          <h5>Add cellar information:</h5>
-          <label htmlFor="location-column">Column</label>
-          <input type="text" id="location-column" onChange={this.handleChange}/>
+          <label htmlFor="locationcolumn">Column</label>
+          <input type="text" id="locationcolumn" onChange={this.handleChange}/>
           </div>
 
           <div className="input-field">
-            <label htmlFor="location-row">Row</label>
-            <input type="text" id="location-row" onChange={this.handleChange}/>
+            <label htmlFor="locationrow">Row</label>
+            <input type="text" id="locationrow" onChange={this.handleChange}/>
           </div>
 
           <div className="input-field">
-          <h5>Add cellar information:</h5>
             <label htmlFor="notes">Enter notes</label>
             <textarea id="notes" className="materialize-textarea" onChange={this.handleChange}/>
           </div>
 
           <div className="input-field">
-            <label htmlFor="pairing-notes">Pairing Notes</label>
-            <textarea id="pairing-notes" className="materialize-textarea" onChange={this.handleChange}/>
+            <label htmlFor="pairingnotes">Pairing Notes</label>
+            <textarea id="pairingnotes" className="materialize-textarea" onChange={this.handleChange}/>
           </div>
 
 
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Login</button>
+            <button className="btn pink lighten-1 z-depth-0">Create</button>
           </div>
         </form>
       </div>
@@ -105,4 +103,4 @@ class CreateNewWine extends Component {
   }
 }
 
-export default CreateNewWine
+export default CreateNewWines
