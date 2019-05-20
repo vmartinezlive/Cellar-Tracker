@@ -26,12 +26,12 @@ class SignUp extends Component {
           <h5 className="grey-text text-darken-3">Sign Up</h5>
           <div className="input-field">
             <label htmlFor="firstName">First Name </label>
-            <input type="firstName" id="firstName" onChange={this.handleChange}/>
+            <input type="text" id="firstName" onChange={this.handleChange}/>
           </div>
-          
+
           <div className="input-field">
             <label htmlFor="lastName">Last Name</label>
-            <input type="lastName" id="lastName" onChange={this.handleChange}/>
+            <input type="text" id="lastName" onChange={this.handleChange}/>
           </div>
 
           <div className="input-field">
