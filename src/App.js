@@ -3,6 +3,8 @@ import  { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Sidebar from './components/layout/Sidebar'
 import Dashboard from './components/wines/Dashboard'
 import WineDetails from './components/wines/WineDetails'
+import SignIn from './components/auth/SignIn'
+import SignUp from './components/auth/SignUp'
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <Switch>
         <Route exact path='/' component={Dashboard} />
         <Route path='/wines/:id' component={WineDetails} />
+        <Route path='/signin' component={SignIn} />
+        <Route path='/signup' component={SignUp} />
       </Switch>
     </div>
     </BrowserRouter>
