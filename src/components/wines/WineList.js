@@ -1,13 +1,16 @@
 import React from 'react'
 import WineSummary from './WineSummary'
 
-const WineList = () => {
+const WineList = ({wines}) => {
   return (
-    <div className="project-list section">
-      <WineSummary/>
-      <WineSummary/>
-      <WineSummary/>
-      <WineSummary/>
+    <div className="wine-list section">
+      { wines && wines.map(wine => {
+        return (
+          <WineSummary wine={wine} key={wine.id}/>
+
+        )
+
+      })}
 
 
     </div>
