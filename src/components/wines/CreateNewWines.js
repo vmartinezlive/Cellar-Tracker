@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { createWine } from '../../store/actions/wineActions'
 
 class CreateNewWines extends Component {
   state = {
@@ -23,7 +25,8 @@ class CreateNewWines extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
+    this.props.createWine(this.state)
   }
   render() {
     return (
@@ -103,4 +106,9 @@ class CreateNewWines extends Component {
   }
 }
 
-export default CreateNewWines
+const mapDispatchToProps = (dispatch) => {
+  return{
+    createWine: (wine) => dispatch(createWine(wine))
+  }
+}
+export default connect(null, mapDispatchToProps)(CreateNewWines)
