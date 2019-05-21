@@ -13,10 +13,10 @@ const initState = {
 const wineReducer = (state = initState, action) => {
   switch(action.type){
     case 'CREATE_WINE':
-      console.log('created wine', action.wine)
+      console.log('created wine', action.wine);
       return state;
     case 'CREATE_WINE_ERROR':
-      console.log('create project error', action.err);
+      console.log('create wine error', action.error);
       return state;
     default:
       return state;
