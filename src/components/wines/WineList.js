@@ -7,8 +7,8 @@ const WineList = ({wines}) => {
     <div className="wine-list section">
       { wines && wines.map(wine => {
         return (
-          <Link to={'/wines/' + wine.id}>
-            <WineSummary wine={wine} key={wine.id}/>
+          <Link to={'/wines/' + wine.id} key={wine.id}>
+            <WineSummary wine={wine} />
           </Link>
         )
       })}

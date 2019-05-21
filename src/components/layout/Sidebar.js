@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SignedInLink from './SignedInLink'
 import SignedOutLink from './SignedOutLink'
+import { connect } from 'react-redux'
 
 const Sidebar = () => {
   return(
@@ -15,4 +16,11 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar;
+const mapStateToProps = (state) => {
+  console.log(state);
+  return{
+
+  }
+}
+
+export default connect(mapStateToProps)(Sidebar)
