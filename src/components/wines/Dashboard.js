@@ -28,8 +28,9 @@ render(){
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
-    wines: state.wine.wines
+    wines: state.firestore.ordered.wines
   }
 }
   export default compose(
