@@ -26,7 +26,7 @@ class SignIn extends Component {
             height: 100vh;
             postion: relative;
             objectfit: cover;
-          
+
         }
         .form {
           postion: absolute;
