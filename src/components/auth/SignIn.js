@@ -28,11 +28,7 @@ class SignIn extends Component {
           postion: absolute;
           margin: 20%;
           margin-top: -500px;
-
         }
-
-
-
 
         `}</style>
         <img className="background2" src={background} alt="background picture of barrel, green grapes and wine bottles"></img>
