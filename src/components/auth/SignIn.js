@@ -22,7 +22,11 @@ class SignIn extends Component {
       <div className="container">
       <style jsx>{`
           .container {
-          max-width: 1800px;
+            width: 100vw;
+            height: 100vh;
+            postion: relative;
+            objectfit: cover;
+          
         }
         .form {
           postion: absolute;

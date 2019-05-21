@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import WineList from './WineList'
 import { connect } from 'react-redux'
 import Notifications from './Notifications'
+import { firestoreConnect } from 'react-redux-firebase'
+import { compose } from 'redux'
 
 class Dashboard extends Component {
 render(){
@@ -30,4 +32,9 @@ const mapStateToProps = (state) => {
     wines: state.wine.wines
   }
 }
-  export default connect(mapStateToProps)(Dashboard)
+  export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+      { collection: 'wines'}
+    ])
+  )(Dashboard)
