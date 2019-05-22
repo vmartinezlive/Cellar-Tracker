@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createWine } from '../../store/actions/wineActions'
+import { Redirect } from 'react-router-dom'
 
 class CreateNewWines extends Component {
   state = {
@@ -29,6 +30,9 @@ class CreateNewWines extends Component {
     this.props.createWine(this.state)
   }
   render() {
+    const { auth } =this.props;
+    if(!auth.uid) return <Redirect to='/signin'/ >
+
     return (
       <div className="container">
 
@@ -106,9 +110,15 @@ class CreateNewWines extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return{
     createWine: (wine) => dispatch(createWine(wine))
   }
 }
-export default connect(null, mapDispatchToProps)(CreateNewWines)
+export default connect(mapStateToProps, mapDispatchToProps)(CreateNewWines)

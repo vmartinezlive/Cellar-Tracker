@@ -2,10 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
+import { Redirect } from 'react-router-dom'
 
 
 const WineDetails = (props) => {
-  const { wine } = props;
+  const { wine, auth } = props;
+  if(!auth.uid) return <Redirect to='/signin'/ >
+
   if (wine) {
     return (
       <div className= "container section wine-details">
@@ -47,7 +50,8 @@ const masStateToProps = (state, ownProps) => {
     const wines = state.firestore.data.wines;
     const wine = wines ? wines[id] : null
   return{
-    wine: wine
+    wine: wine,
+    auth: state.firebase.auth
   }
 }
 export default compose(
