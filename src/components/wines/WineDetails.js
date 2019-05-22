@@ -5,6 +5,7 @@ import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 
 
+
 const WineDetails = (props) => {
   const { wine, auth } = props;
   if(!auth.uid) return <Redirect to='/signin'/ >
