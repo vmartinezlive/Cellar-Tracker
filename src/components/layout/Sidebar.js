@@ -5,9 +5,9 @@ import SignedOutLink from './SignedOutLink'
 import { connect } from 'react-redux'
 
 const Sidebar = (props) => {
-  const { auth } = props;
+  const { auth, profile } = props;
   // console.log(auth);
-  const links = auth.uid ? <SignedInLink/> : <SignedOutLink />;
+  const links = auth.uid ? <SignedInLink profile={profile}/> : <SignedOutLink />;
   return(
     <nav className="sidebar grey darken-3">
       <div className="container">
@@ -19,8 +19,10 @@ const Sidebar = (props) => {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return{
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    profile: state.firebase.profile
   }
 }
 
