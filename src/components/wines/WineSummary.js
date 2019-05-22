@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 
 const WineSummary = ({wine}) => {
 
@@ -7,7 +8,7 @@ const WineSummary = ({wine}) => {
       <div className="card-content grey-text text-darken-3">
         <span className="card-title">{wine.winename}</span>
         <p>Posted by {wine.authorFirstName} {wine.authorLastName}</p>
-        <p className="grey-text">June 1, 2am</p>
+        <p className="grey-text">{moment(wine.createdAt.toDate()).calendar()}</p>
       </div>
     </div>
   )
