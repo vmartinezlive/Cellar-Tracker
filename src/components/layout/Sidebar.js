@@ -9,7 +9,13 @@ const Sidebar = (props) => {
   // console.log(auth);
   const links = auth.uid ? <SignedInLink profile={profile}/> : <SignedOutLink />;
   return(
-    <nav className="sidebar grey darken-3">
+    <nav className="sidebar ">
+      <style jsx>{`
+        .sidebar {
+          background-color: #E1984A;
+        }
+
+        `}</style>
       <div className="container">
       <Link to='/' className="brand-logo">Cellar Tracker</Link>
       { links }
