@@ -18,6 +18,12 @@ const wineReducer = (state = initState, action) => {
     case 'CREATE_WINE_ERROR':
       console.log('create wine error', action.error);
       return state;
+    case 'DELETE_WINE':
+      console.log('delete wine', action.wine);
+      return state;
+    case 'DELETE_WINE_ERROR':
+      console.log('delete wine error', action.error);
+      return state;
     default:
       return state;
 

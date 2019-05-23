@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import background from '../../assets/signinbkgrnd.png';
 import { connect } from 'react-redux'
 import { signIn } from '../../store/actions/authAction'
 import { Redirect } from 'react-router-dom'
+import photo from './../../img/signIn.png'
+
 
 class SignIn extends Component {
   state = {
@@ -24,28 +25,35 @@ class SignIn extends Component {
     const { authError, auth } = this.props;
     if(auth.uid) return <Redirect to='/'/ >
     return (
-      <div className="container">
+      <div className="section">
       <style jsx>{`
-          .container {
-            width: 100vw;
-            height: 100vh;
-            postion: relative;
-            objectfit: cover;
+        .section{
+          position: relative;
+          width: 100%;
 
-        }
-        .form {
-          postion: absolute;
-          margin: 20%;
-          margin-top: -500px;
-        }
+      }
+      .container img {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        position: center;
+      }
+      .form {
+        position: inline-block;
+        margin-top: -500px;
+        margin-left: 200px;
+        margin-right: 200px;
+      }
 
         `}</style>
-        <img className="background2" src={background} alt="background picture of barrel, green grapes and wine bottles"></img>
+        <section>
+          <img src={photo} alt="wine bottle and barrels"/>
+        </section>
         <div className="form">
-        <form className="formSignIn" onSubmit={this.handleSubmit} className="white">
-          <h5 className="grey-text text-darken-3">Sign In</h5>
+        <form className="formSignIn" onSubmit={this.handleSubmit}>
+          <h5 className="orange-text text-lighten-4">Sign In</h5>
           <div className="input-field">
-            <label htmlFor="email">Email</label>
+            <label className="label" htmlFor="email">Email</label>
             <input type="email" id="email" onChange={this.handleChange}/>
           </div>
           <div className="input-field">
@@ -53,7 +61,7 @@ class SignIn extends Component {
             <input type="password" id="password" onChange={this.handleChange}/>
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Login</button>
+            <button className="btn orange lighten-3 z-depth-0">Login</button>
             <div className="red-text center">
               { authError ? <p>{authError}</p> : null }
             </div>
@@ -82,3 +90,13 @@ export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
 // .container{
 //   background-image: url('../../assets/signinbkgrnd.png')
 // }
+
+
+
+
+
+
+// width: 100vw;
+// height: 100vh;
+// postion: relative;
+// objectfit: cover;

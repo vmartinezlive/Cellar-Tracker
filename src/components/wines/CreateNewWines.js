@@ -24,6 +24,8 @@ class CreateNewWines extends Component {
       [e.target.id]: e.target.value
     })
   }
+
+
   handleSubmit = (e) => {
     e.preventDefault();
     // console.log(this.state);
@@ -40,7 +42,8 @@ class CreateNewWines extends Component {
           <h5 className="grey-text text-darken-3">Add New Wine</h5>
           <div className="input-field">
             <label htmlFor="winename">Name of the Wine</label>
-            <input type="text" id="winename" onChange={this.handleChange}/>
+            <input type="text" id="winename" onChange={this.handleChange} />
+
           </div>
 
           <div className="input-field">

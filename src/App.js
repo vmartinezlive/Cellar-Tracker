@@ -12,6 +12,12 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
+    <style>{`
+      .App{
+        background-color: black;
+        height: 100vh;
+      }
+      `}</style>
       <Sidebar/>
       <Switch>
         <Route exact path='/' component={Dashboard} />
