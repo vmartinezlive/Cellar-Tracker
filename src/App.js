@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-    <style>{`
+    <style jsx>{`
       .App{
         background-color: black;
         height: 100vh;

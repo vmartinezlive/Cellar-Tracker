@@ -27,6 +27,9 @@ class SignUp extends Component {
     if(auth.uid) return <Redirect to='/'/>
     return (
       <div className="container">
+      <style jsx>{`
+
+        `}</style>
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className="grey-text text-darken-3">Sign Up</h5>
           <div className="input-field">
@@ -49,7 +52,7 @@ class SignUp extends Component {
             <input type="password" id="password" onChange={this.handleChange}/>
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Login</button>
+            <button className="btn orange lighten-3 z-depth-0">Login</button>
             <div className="red-text center">
               { authError ? <p>{authError}</p>: null }
             </div>

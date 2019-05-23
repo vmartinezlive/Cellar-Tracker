@@ -9,9 +9,9 @@ import whiteWine from '../../img/whiteWine1.png'
 
 
 const WineDetails = (props) => {
+
   const { wine, auth } = props;
   if(!auth.uid) return <Redirect to='/signin'/ >
-
   if (wine) {
     return (
       <div className="container section wine-details">
@@ -28,9 +28,7 @@ const WineDetails = (props) => {
             margin-top: 40px;kkj
             }
           `}</style>
-        <div className="right-align">
-          <a class="btn-floating btn-small  waves-effect waves-light red right-align"><i class="material-icons">delete</i></a>
-        </div>
+
         <div className="card z-depth-0">
           <div className="card-content">
           <div className="card-image">
@@ -69,12 +67,6 @@ const WineDetails = (props) => {
 
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   return{
-//     deleteWine: (wine) => dispatch(deleteWine(wine))
-//   }
-// }
-
 const mapStateToProps = (state, ownProps) => {
   console.log(state);
     const id = ownProps.match.params.id;
@@ -89,6 +81,33 @@ export default compose(
   connect(mapStateToProps),
   firestoreConnect([
     { collection: 'wines' }
-  ])
+  ]),
+
 
 )(WineDetails)
+
+
+
+
+
+
+
+
+
+// handleDelete = (e) => {
+//   e.preventDefault()
+//
+//   this.props.deleteWine(this.props)
+// }
+
+// const mapDispatchToProps = (dispatch) => {
+//   return{
+//     deleteWine: (wine) => dispatch(deleteWine(wine))
+//   }
+// }
+
+
+
+// <div className="right-align">
+//   <a class="btn-floating btn-small  waves-effect waves-light red right-align" onDelete={this.handleDelete}><i class="material-icons">delete</i></a>
+// </div>

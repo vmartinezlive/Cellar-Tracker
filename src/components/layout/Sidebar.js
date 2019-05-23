@@ -5,6 +5,7 @@ import SignedOutLink from './SignedOutLink'
 import { connect } from 'react-redux'
 import logo from './../../img/logo.png'
 
+
 const Sidebar = (props) => {
   const { auth, profile } = props;
   // console.log(auth);
@@ -17,13 +18,13 @@ const Sidebar = (props) => {
         width: 115px;
         height: auto;
         z-index: 2;
-        margin-top: 10px;
-
       }
+
       `}</style>
       <div className="container">
       <Link to='/'className="brand-logo">
       <img className="cellarImg" src={logo} alt=""/>
+
       </Link>
       { links }
       </div>
