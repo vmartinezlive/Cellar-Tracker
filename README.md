@@ -7,6 +7,7 @@
 ## Description
 
 Cellar Tracker is a personal management system for users personal wine collection
+please view previous work on https://github.com/vmartinezlive/capstone.git
 
 ## Setup/Installation Requirements
 
