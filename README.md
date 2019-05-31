@@ -1,3 +1,39 @@
+# Cellar Tracker
+
+#### Consumer personal wine management system, May 24, 2019
+
+#### By Victoria Martinez
+
+## Description
+
+Cellar Tracker is a personal management system for users personal wine collection
+
+## Setup/Installation Requirements
+
+* Clone github: https://github.com/vmartinezlive/Cellar-Tracker.git
+* run npm install
+* run npm start
+
+## Technologies used
+
+* React
+* JavaScript
+* CSS
+
+
+## Known Bugs
+
+There are no known bugs
+
+## Support and contact details
+
+For information and question please email vmartinez72@live.com
+
+
+###  License
+This software is licensed under the MIT license.
+Copyright(c) 2019 Victoria Martinez
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
